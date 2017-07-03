@@ -7,6 +7,7 @@ import reducers from './src/reducers';
 import PageOne from './src/PageOne';
 import PageTwo from './src/PageTwo';
 import PageThree from './src/PageThree';
+import ListThumbnailExample from './src/ListThumbnailExample';
 import logger from 'redux-logger';
 
 const RouterWithRedux = connect()(Router);
@@ -23,21 +24,11 @@ export default class App extends Component {
           <Scene key="tabbar" tabs={true} >
             <Scene key="tab1" component={PageOne} title="page one" icon={TabIcon} initial={true} />
             <Scene key="tab2" component={PageTwo} title="page two" icon={TabIcon}/>
-            <Scene key="tab3" component={PageThree} title="page th" icon={TabIcon}/>
+            <Scene key="tab3" component={PageThree} title="page three" icon={TabIcon}/>
+            <Scene key="tab4" component={ListThumbnailExample} title="page four" icon={TabIcon}/>
           </Scene>
         </RouterWithRedux>
       </Provider>
-      // <Router>
-      //   {/* <Scene key="root">
-      //     <Scene key="pageOne" component={PageOne} title="PageOne" initial={true} />
-      //     <Scene key="pageTwo" component={PageTwo} title="PageTwo" />
-      //   </Scene> */}
-      //   <Scene key="tabbar" tabs={true} >
-      //     <Scene key="tab1" component={PageOne} title="page one" icon={TabIcon} initial={true} />
-      //     <Scene key="tab2" component={PageTwo} title="page two" icon={TabIcon}/>
-      //     <Scene key="tab3" component={PageThree} title="page th" icon={TabIcon}/>
-      //   </Scene>
-      // </Router>
     )
   }
 }
